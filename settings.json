@@ -1,0 +1,7 @@
+{
+    "git.enabled": false,
+    "editor.renderWhitespace": "all",
+    "files.insertFinalNewline": true,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true
+}
