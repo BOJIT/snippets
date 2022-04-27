@@ -5,15 +5,13 @@
         "body": [
             "/**",
             " * @file ${TM_FILENAME}",
-            " * @author ${1:###AUTHOR###}",
+            " * @author ${1:James Bennion-Pedley}",
             " * @brief ${2:Brief summary here}",
             " * @date ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
             " * ",
             " * @copyright Copyright (c) ${CURRENT_YEAR}",
             " * ",
             " */",
-            "",
-            "/*----------------------------------------------------------------------------*/",
             ""
         ],
         "description": "Generate header for C++ file"
@@ -31,7 +29,7 @@
         "scope": "c, cpp",
         "prefix": "label",
         "body": [
-            "/*-------------------------------------${2} ${1} -------------------------------------${2}*/",
+            "/*-------------------------------------${2} ${1} -------------------------------------${2}${3}*/",
             ""
         ],
         "description": "Generate separator for C++ file"
@@ -40,12 +38,12 @@
         "scope": "c, cpp",
         "prefix": "guard",
         "body": [
-            "#ifndef __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}__",
-            "#define __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}__",
+            "#ifndef __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}_",
+            "#define __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}_",
             "",
             "${1}",
             "",
-            "#endif /* __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}__ */"
+            "#endif /* __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}_ */"
         ],
         "description": "Generate header/include guard for C++ file"
     },
@@ -68,5 +66,73 @@
             "#endif /* ${1:EXPRESSION} */"
         ],
         "description": "Generate #if with closing comment"
+    },
+    "extern C": {
+        "scope": "cpp",
+        "prefix": "extern C",
+        "body": [
+            "#ifdef __cplusplus",
+            "extern \"C\" {",
+            "#endif /* __cplusplus */",
+            "",
+            "${1}",
+            "",
+            "#ifdef __cplusplus",
+            "}",
+            "#endif /* __cplusplus */",
+            ""
+        ],
+        "description": "Escape C code (no name mangling)"
+    },
+    "driver class header": {
+        "scope": "cpp",
+        "prefix": "driver class header",
+        "body": [
+            "",
+            "#ifndef __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}_",
+            "#define __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}_",
+            "",
+            "/*--------------------------------- Includes ---------------------------------*/",
+            "",
+            "/*------------------------------- Primary Class ------------------------------*/",
+            "",
+            "namespace ${1:DRIVER} {",
+            "",
+            "class ${2:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}",
+            "{",
+            "public:",
+            "    ${3}",
+            "",
+            "private:",
+            "    ${4}",
+            "}",
+            "",
+            "} /* namespace ${1:DRIVER} */",
+            "",
+            "/*----------------------------------------------------------------------------*/",
+            "",
+            "#endif /* __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}_ */",
+            ""
+        ],
+        "description": "Generic driver class header for C++ projects"
+    },
+    "driver class body": {
+        "scope": "cpp",
+        "prefix": "driver class body",
+        "body": [
+            "/*--------------------------------- Includes ---------------------------------*/",
+            "",
+            "#include \"${TM_FILENAME_BASE}.h\"",
+            "",
+            "/*------------------------------ Public Methods ------------------------------*/",
+            "",
+            "${1}",
+            "",
+            "/*------------------------------ Private Methods -----------------------------*/",
+            "",
+            "${2}",
+            ""
+        ],
+        "description": "Generic driver class body for C++ projects"
     }
 }
