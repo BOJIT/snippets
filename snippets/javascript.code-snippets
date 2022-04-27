@@ -1,3 +1,20 @@
 {
-
+	"separator": {
+        "scope": "javascript",
+        "prefix": "separator",
+        "body": [
+            "/*----------------------------------------------------------------------------*/",
+            ""
+        ],
+        "description": "Generate separator for JS file"
+    },
+    "label": {
+        "scope": "javascript",
+        "prefix": "label",
+        "body": [
+            "/*-------------------------------------${2} ${1} -------------------------------------${2}*/",
+            ""
+        ],
+        "description": "Generate separator for JS file"
+    },
 }
