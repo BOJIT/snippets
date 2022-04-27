@@ -5,13 +5,13 @@ Snippets for VSCode (various languages)
 In the root of your target project, run the following command to fetch all snippets:
 
 ```bash
-sh -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" --all
+bash -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" get --all
 ```
 
 Or, fetch a specific language using `vscode` language names, e.g.
 
 ```bash
-sh -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" cplusplus
+bash -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" get cplusplus
 ```
 
 ## Operation

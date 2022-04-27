@@ -39,6 +39,13 @@ function getSnippet() {
 
 # ---------------------------------------------------------------------------- #
 
+# Check language flag is passed
+if [[ $1 = "" ]]
+then
+	echo "No Language Selected!"
+	exit 1
+fi
+
 mkdir -p .vscode
 
 # Get name for substitution
@@ -66,3 +73,5 @@ case $1 in
 	getSnippet $1
 	;;
 esac
+
+# TODO get settings.json too?
