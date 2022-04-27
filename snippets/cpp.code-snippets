@@ -1,0 +1,72 @@
+{
+    "header": {
+        "scope": "c, cpp",
+        "prefix": "header",
+        "body": [
+            "/**",
+            " * @file ${TM_FILENAME}",
+            " * @author ${1:###AUTHOR###}",
+            " * @brief ${2:Brief summary here}",
+            " * @date ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+            " * ",
+            " * @copyright Copyright (c) ${CURRENT_YEAR}",
+            " * ",
+            " */",
+            "",
+            "/*----------------------------------------------------------------------------*/",
+            ""
+        ],
+        "description": "Generate header for C++ file"
+    },
+    "separator": {
+        "scope": "c, cpp",
+        "prefix": "separator",
+        "body": [
+            "/*----------------------------------------------------------------------------*/",
+            ""
+        ],
+        "description": "Generate separator for C++ file"
+    },
+    "label": {
+        "scope": "c, cpp",
+        "prefix": "label",
+        "body": [
+            "/*-------------------------------------${2} ${1} -------------------------------------${2}*/",
+            ""
+        ],
+        "description": "Generate separator for C++ file"
+    },
+    "guard": {
+        "scope": "c, cpp",
+        "prefix": "guard",
+        "body": [
+            "#ifndef __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}__",
+            "#define __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}__",
+            "",
+            "${1}",
+            "",
+            "#endif /* __${RELATIVE_FILEPATH/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}__ */"
+        ],
+        "description": "Generate header/include guard for C++ file"
+    },
+    "#if": {
+        "scope": "c, cpp",
+        "prefix": "#if",
+        "body": [
+            "#if ${1:EXPRESSION}",
+            "    ${2}",
+            "#endif /* ${1:EXPRESSION} */"
+        ],
+        "description": "Generate #if with closing comment"
+    },
+    "#ifdef": {
+        "scope": "c, cpp",
+        "prefix": "#ifdef",
+        "body": [
+            "#ifdef ${1:EXPRESSION}",
+            "    ${2}",
+            "#endif /* ${1:EXPRESSION} */"
+        ],
+        "description": "Generate #if with closing comment"
+    }
+}
