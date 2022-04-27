@@ -11,7 +11,7 @@ bash -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" get --all
 Or, fetch a specific language using `vscode` language names, e.g.
 
 ```bash
-bash -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" get cplusplus
+bash -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" get cpp
 ```
 
 ## Operation
