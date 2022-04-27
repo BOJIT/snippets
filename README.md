@@ -2,11 +2,24 @@
 Snippets for VSCode (various languages)
 
 ## Usage
-In the root of your target project, run the following command:
+In the root of your target project, run the following command to fetch all snippets:
 
 ```bash
 sh -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" --all
 ```
 
-This will fetch every code snippet, plus `settings.json` and place them in your
-`.vscode` folder.
+Or, fetch a specific language using `vscode` language names, e.g.
+
+```bash
+sh -c "$(curl -fsSL https://snippets.bojit.org/get.sh)" cplusplus
+```
+
+## Operation
+
+This script does the following:
+
+- Fetches the appropriate snippets and places them in your `.vscode/` folder.
+
+- Adds the snippets to `.gitignore` if present
+
+- Gives the option to set a custom default author (if you're not me :D)

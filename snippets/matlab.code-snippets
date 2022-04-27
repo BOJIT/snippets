@@ -5,7 +5,7 @@
         "body": [
             "% FILE:         ${TM_FILENAME}",
             "% DESCRIPTION:  ${1:Brief summary here}",
-            "% AUTHOR:       ${2:James Bennion-Pedley}",
+            "% AUTHOR:       ${2:###AUTHOR###}",
             "% DATE CREATED: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
             "",
             "%------------------------------------------------------------------------------%",
