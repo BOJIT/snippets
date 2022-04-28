@@ -1,7 +1,8 @@
 {
     "git.enabled": false,
-    "editor.renderWhitespace": "all",
     "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.renderWhitespace": "all",
     "editor.detectIndentation": false,
     "editor.insertSpaces": true,
     "editor.rulers": [80]
