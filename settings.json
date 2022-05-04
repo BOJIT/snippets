@@ -1,9 +1,12 @@
 {
-    "git.enabled": false,
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "'Comic Mono', Consolas, 'Courier New', monospace",
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [80],
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "editor.renderWhitespace": "all",
-    "editor.detectIndentation": false,
-    "editor.insertSpaces": true,
-    "editor.rulers": [80]
+    "git.enabled": false,
+    "workbench.colorTheme": "midnight blue",
+    "workbench.iconTheme": "vscode-icons",
 }
