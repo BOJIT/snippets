@@ -1,6 +1,8 @@
 {
     "editor.detectIndentation": false,
-    "editor.fontFamily": "'Comic Mono', Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
     "editor.insertSpaces": true,
     "editor.renderWhitespace": "all",
     "editor.rulers": [80],
@@ -8,5 +10,6 @@
     "files.trimTrailingWhitespace": true,
     "git.enabled": false,
     "workbench.colorTheme": "midnight blue",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "vscode-icons"
 }
+
