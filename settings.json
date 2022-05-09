@@ -10,6 +10,7 @@
     "files.trimTrailingWhitespace": true,
     "git.enabled": false,
     "workbench.colorTheme": "midnight blue",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always"
 }
-
