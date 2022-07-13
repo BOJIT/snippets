@@ -35,7 +35,14 @@ function getSnippet() {
 	curl $URL -s --output $FILE
 
 	# Change author name
-	sed -i "s/###AUTHOR###/$AUTHOR/" $FILE
+	if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+		# Linux
+		sed -i "s/###AUTHOR###/$AUTHOR/" $FILE
+	elif [[ "$OSTYPE" == "darwin"* ]]; then
+		# Mac OSX
+		sed -i.bak "s/###AUTHOR###/$AUTHOR/" $FILE
+		rm $FILE.bak
+	fi
 
 	addGitignore $FILE
 
