@@ -1,5 +1,5 @@
 {
-	"separator": {
+    "separator": {
         "scope": "javascript",
         "prefix": "separator",
         "body": [

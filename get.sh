@@ -4,7 +4,7 @@
 
 BASE_URL="https://snippets.bojit.org"
 
-LANGUAGES=(cpp javascript matlab shell)
+LANGUAGES=(cpp javascript matlab shell svelte)
 
 AUTHOR="James Bennion-Pedley"
 INPUT_AUTHOR=""

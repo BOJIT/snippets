@@ -5,7 +5,7 @@
         "body": [
             "/**",
             " * @file ${TM_FILENAME}",
-            " * @author ${1:James Bennion-Pedley}",
+            " * @author ${1:###AUTHOR###}",
             " * @brief ${2:Brief summary here}",
             " * @date ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
             " * ",
