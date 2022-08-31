@@ -1,0 +1,34 @@
+{
+    "header": {
+        "scope": "python",
+        "prefix": "py-header",
+        "body": [
+            "# @file ${TM_FILENAME}",
+            "# @author ${1:###AUTHOR###}",
+            "# @brief ${2:Brief summary here}",
+            "# @date ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}",
+            "# ",
+            "# @copyright Copyright (c) ${CURRENT_YEAR}",
+            ""
+        ],
+        "description": "Generate header for Python file"
+    },
+    "separator": {
+        "scope": "python",
+        "prefix": "py-separator",
+        "body": [
+            "#------------------------------------------------------------------------------#",
+            ""
+        ],
+        "description": "Generate separator for Python file"
+    },
+    "label": {
+        "scope": "python",
+        "prefix": "py-label",
+        "body": [
+            "#--------------------------------------${2} ${1} -------------------------------------${2}${3}-#",
+            ""
+        ],
+        "description": "Generate separator for Python file"
+    }
+}
