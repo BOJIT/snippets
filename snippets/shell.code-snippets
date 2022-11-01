@@ -1,6 +1,6 @@
 {
     "header": {
-        "scope": "shell",
+        "scope": "shellscript",
         "prefix": "header",
         "body": [
             "#!/bin/bash",
@@ -15,7 +15,7 @@
         "description": "Generate header for shell script"
     },
     "separator": {
-        "scope": "shell",
+        "scope": "shellscript",
         "prefix": "separator",
         "body": [
             "#------------------------------------------------------------------------------#",
@@ -24,7 +24,7 @@
         "description": "Generate separator for shell script"
     },
     "label": {
-        "scope": "shell",
+        "scope": "shellscript",
         "prefix": "label",
         "body": [
             "#--------------------------------------${2} ${1} --------------------------------------${2}${3}#",
