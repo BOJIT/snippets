@@ -10,7 +10,15 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "git.enabled": false,
-    "[svelte]": {"editor.defaultFormatter": "svelte.svelte-vscode"},
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
     "workbench.colorTheme": "midnight blue",
     "workbench.iconTheme": "vscode-icons",
     "workbench.tree.indent": 16,
