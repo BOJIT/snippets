@@ -19,6 +19,9 @@
     "[svelte]": {
         "editor.defaultFormatter": "svelte.svelte-vscode"
     },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "workbench.colorTheme": "midnight blue",
     "workbench.iconTheme": "vscode-icons",
     "workbench.tree.indent": 16,
